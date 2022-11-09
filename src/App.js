@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App container mx-auto mt-3">
-      <h1 className="flex font-bold p-3 mb-3">
+      <h1 className="font-bold p-3 mb-3">
       <BiCalendar className="text-2xl text-red-300 inline-block align-top" />Your Appointments</h1>
       <AddAppointment />
       <Search query={query}
