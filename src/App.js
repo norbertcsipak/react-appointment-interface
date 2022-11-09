@@ -41,7 +41,10 @@ function App() {
     <div className="App container mx-auto mt-3">
       <h1 className="font-bold p-3 mb-3">
       <BiCalendar className="text-2xl text-red-300 inline-block align-top" />Your Appointments</h1>
-      <AddAppointment />
+      <AddAppointment
+        onSendAppointment={myAppointment => setAppointmentList({... appointmentList, myAppointment})}
+        lastId={appointmentList.reduce((max, item) => Number(item.id) > max ? Number(item.id) : max, 0)}
+        />
       <Search
         orderBy={orderBy}
         onOrderByChange={myOrder => setOrderBy(myOrder)}
